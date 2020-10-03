@@ -41,3 +41,24 @@ header nav ul li a {
   font-weight: normal;
   font-size: 25px;
 }
+/* end header style */
+
+/* start footer style */
+
+footer {
+  background: tan;
+  width: 100%;
+  padding: 20px 35px;
+  color: #4169E1; /* makes text blue */
+}
+
+footer a {
+  text-align: left; /* puts email on left */
+  text-decoration: none; /* takes away underline from email */
+  color: #4169E1; /* have to declare here because href makes it blue otherwise */
+}
+
+footer p {
+  text-align: right; /* makes mobile on right */
+  float: right; /* puts email and mobile on same line */
+}
