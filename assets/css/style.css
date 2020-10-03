@@ -80,11 +80,8 @@ header nav ul li a {
 /* start work samples section style */
 
 .samples {  /* text placement of work samples section */
-  padding: 0 30px 0 470px; /* top, right, bottom, left images distance from left margin */
-  /*align-items: flex-start; /* flexbox */
-  font-size: 30px;
- display: inline-flexbox; /* makes work samples left aligned with grid underneath */
- text-align: left;
+  font-size: 50px; /* make boxes look right */
+  display: flexbox; /* makes work samples left aligned with grid underneath */
 }
 
 .samples-grid-container {
