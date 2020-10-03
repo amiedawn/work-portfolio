@@ -78,6 +78,19 @@ header nav ul li a {
 
 /* end about section style */
 
+/* start work samples section style */
+
+/* end work samples section style */
+
+/* start contact section style */
+.contact-img {
+  display: flex; /*makes 3 icons in an even row that flexes, cannot do inline-flex or justify-content won't work */
+  justify-content:  space-around; /* makes the 3 icons evenly separated */
+  align-items: center; /* vertically centers the icons */
+}
+
+/* end contact section style */
+
 /* start footer style */
 
 footer {
@@ -101,8 +114,7 @@ footer p {
 
 /* The following need to stay at the bottom of the CSS file */
 section {
- 
-  padding: 60px;
+  padding: 40px;
   color: #990000;
   background-color: tan;
 }
@@ -111,7 +123,7 @@ section h2 {  /* section titles formatting */
   color: brown;
   text-decoration: underline;
   font-style: italic;
-  padding-top: 90px; /* so that when you go to the heading from menu, you can see the title */
+ /* padding-top: 90px; /* so that when you go to the heading from menu, you can see the title */
   padding-bottom: 20px; /* space between section heading and the image */
   font-size: 40px;
 }
