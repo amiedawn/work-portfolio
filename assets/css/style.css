@@ -67,7 +67,7 @@ header nav ul li a {
 
 /* start about section style */
 .about-info { /* keeps picture next to <p> text when flexing */
-  display: inline-flex;
+  display: flex;
 }
 
 .about-info p {  /* text placement of about section */
@@ -75,11 +75,56 @@ header nav ul li a {
   align-items: flex-start;
   font-size: 30px;
 }
-
 /* end about section style */
 
 /* start work samples section style */
 
+.samples {  /* text placement of work samples section */
+  padding: 0 30px 0 470px; /* top, right, bottom, left images distance from left margin */
+  /*align-items: flex-start; /* flexbox */
+  font-size: 30px;
+ display: inline-flex; /* makes work samples left aligned with grid underneath */
+ text-align: left;
+}
+
+.samples-grid-container {
+  display: grid;
+  padding: 20px; /* gap between section title and grid */
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 10px;  /* space between all cells */
+  grid-auto-flow: dense; /* puts boxes 2 and 4 in the right places */
+}
+
+.samples-grid-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  border: solid;
+  color: white;
+  padding: 1em;
+}
+
+.box1 {
+  grid-column: 1 / span 3;
+  grid-row: 1 / span 2;
+}
+
+.box3 {
+  grid-column:  5 / span 1;
+  grid-row: 1 / span 2;
+}
+
+.box5 {
+  grid-column: 1 / span 3;
+  grid-row: 3 / span 1;
+}
+
+.box6 {
+  grid-column: 4 / span 2;
+  grid-row: 3 / span 1;
+}
 /* end work samples section style */
 
 /* start contact section style */
@@ -87,12 +132,11 @@ header nav ul li a {
   display: flex; /*makes 3 icons in an even row that flexes, cannot do inline-flex or justify-content won't work */
   justify-content:  space-around; /* makes the 3 icons evenly separated */
   align-items: center; /* vertically centers the icons */
+  flex-wrap: wrap; /* makes 3 icons stack on top of each other in mobile view */
 }
-
 /* end contact section style */
 
 /* start footer style */
-
 footer {
   background: tan;
   width: 100%;
@@ -111,6 +155,7 @@ footer p {
   text-align: right; /* makes mobile number on right */
   float: right; /* puts email and mobile on same line */
 }
+/* end footer style */
 
 /* The following need to stay at the bottom of the CSS file */
 section {
