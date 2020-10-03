@@ -12,6 +12,18 @@ body {
 header {
   padding: 20px 35px;
   background-color: tan;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: -webkit-sticky; /* makes sticky header for Safari */
+  position: sticky;
+  top: 0;
+  background-image: url("../images/hero-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-position: 80%;
+  z-index: 9999;   /* keeps header at forefront when scrolling through page */
 }
 
 header h1 {
@@ -43,6 +55,29 @@ header nav ul li a {
 }
 /* end header style */
 
+/* start hero section style */
+.hero {
+  background-image: url("../images/hero-img.jpg");
+  min-height: 500px;
+  background-size: cover; /* makes the image fit the screen so you can see the whole thing */
+  background-position: center;
+}
+
+/* end hero section style */
+
+/* start about section style */
+.about-info { /* keeps picture next to <p> text when flexing */
+  display: inline-flex;
+}
+
+.about-info p {  /* text placement of about section */
+  padding: 0 60px 0 80px; 
+  align-items: flex-start;
+  font-size: 30px;
+}
+
+/* end about section style */
+
 /* start footer style */
 
 footer {
@@ -50,15 +85,33 @@ footer {
   width: 100%;
   padding: 20px 35px;
   color: #4169E1; /* makes text blue */
+  font-size: 35px;
 }
 
 footer a {
-  text-align: left; /* puts email on left */
+  text-align: left; /* puts email address on left */
   text-decoration: none; /* takes away underline from email */
   color: #4169E1; /* have to declare here because href makes it blue otherwise */
 }
 
 footer p {
-  text-align: right; /* makes mobile on right */
+  text-align: right; /* makes mobile number on right */
   float: right; /* puts email and mobile on same line */
+}
+
+/* The following need to stay at the bottom of the CSS file */
+section {
+ 
+  padding: 60px;
+  color: #990000;
+  background-color: tan;
+}
+
+section h2 {  /* section titles formatting */
+  color: brown;
+  text-decoration: underline;
+  font-style: italic;
+  padding-top: 90px; /* so that when you go to the heading from menu, you can see the title */
+  padding-bottom: 20px; /* space between section heading and the image */
+  font-size: 40px;
 }
