@@ -79,7 +79,6 @@ header nav ul li a {
   margin-right: 20px; /* moving in label from right edge */
   margin-bottom: 20px; /* moving in label from bottom edge */
 }
-
 /* end hero section style */
 
 /* start about section style */
@@ -95,7 +94,6 @@ header nav ul li a {
 /* end about section style */
 
 /* start work samples section style */
-
 .samples {  /* text placement of work samples section */
   font-size: 50px; /* make boxes look right */
   display: flexbox; /* makes work samples left aligned with grid underneath */
@@ -222,7 +220,7 @@ footer a {
 } 
 /* end footer style */
 
-/* The following need to stay at the bottom of the CSS file */
+/* The following need to stay at the bottom of the CSS file, but before media queries */
 section {
   padding: 40px;
   color: var(--primary-color);
@@ -249,10 +247,15 @@ section h2 {  /* section titles formatting */
    header h1 {
        width: 100%;
        text-align: center;
+       
    }
 
    header nav ul li a {
-       font-size: 20px;
+       font-size: 15px;
+       flex-direction: column; /* makes the menu stack instead of inline */
+       align-items: center; /* makes the menu stack instead of inline */
+       display: block; /* makes the menu items stacked */
+       text-align: center; /* makes the menu items centered when stacked */
    }
 
    .hero {
@@ -260,12 +263,13 @@ section h2 {  /* section titles formatting */
    }
 
    .about-info {
-     flex-direction: column;
-     align-items: center;
-      }
+     flex-direction: column; /* makes the picture and text stack instead of inline */
+     align-items: center; /* makes the picture and text stack instead of inline */
+   }
 
    .about-info p {
      padding-top: 30px;
+     font-size: 20px;
    }   
 
    .section h2 {
@@ -275,7 +279,7 @@ section h2 {  /* section titles formatting */
    footer {
      flex-direction: column;
      align-items: center;
-     
+     font-size: 20px;
    }
 }  
 
