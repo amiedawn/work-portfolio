@@ -106,10 +106,17 @@ header nav ul li a {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: black;
   border: solid;
   color: white;
   padding: 1em;
+}
+
+.samples-grid-item a {
+  color: black;
+  border: 3px solid;
+  padding: 10px;
+  background-color: #4169E1;
+  font-size: 20px;
 }
 
 .box1 {
