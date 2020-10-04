@@ -209,18 +209,17 @@ footer {
   padding: 20px 35px;
   color: var(--secondary-color); /* makes text blue */
   font-size: 35px;
+  display: flex;
+  flex-direction: rows;
+  align-items: stretch;
+  justify-content: space-between;
 }
 
 footer a {
-  text-align: left; /* puts email address on left */
-  text-decoration: none; /* takes away underline from email */
-  color: var(--secondary-color); /* have to declare here because href makes it blue otherwise */
-}
-
-footer p {
-  text-align: right; /* makes mobile number on right */
-  float: right; /* puts email and mobile on same line */
-}
+  margin: 0;
+  padding: 0;
+    text-decoration: none; /* takes away underline from email */
+} 
 /* end footer style */
 
 /* The following need to stay at the bottom of the CSS file */
@@ -260,21 +259,36 @@ section h2 {  /* section titles formatting */
      width: 100%;
    }
 
+   .about-info {
+     flex-direction: column;
+     align-items: center;
+      }
+
+   .about-info p {
+     padding-top: 30px;
+   }   
+
    .section h2 {
      width: 80;
    }
 
-   footer a, footer p {
-     text-align: center;
-     width: 100%;
+   footer {
+     flex-direction: column;
+     align-items: center;
+     
    }
+}  
 
 /* MEDIA QUERY FOR TABLETS AND SMALLER */
 @media screen and (max-width: 768px) {
   section {
       padding: 30px 15px;
-    }
+  }
 
+  .about img, .about p {
+    display: block;
+  }
+}
 /* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
 @media screen and (max-width: 575px) {
   section h2 {
