@@ -4,6 +4,12 @@
   box-sizing: border-box;
 } 
 
+:root {
+  --primary-color: #A52A2A; /*brownish-red*/
+  --secondary-color: #4169e1; /*blue*/
+  --tertiary-color: #d2b48c; /*tan*/
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -11,7 +17,7 @@ body {
 /* start header style */
 header {
   padding: 20px 35px;
-  background-color: tan;
+  background-color: var(--tertiary-color);
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -26,12 +32,11 @@ header h1 {
   font-size: 40px;
   margin: 0;
   display: inline; /* makes menu line up with title */
-  color: yellow;
 }
 
 header a {
   text-decoration: none;
-  color: #4169E1; /* menu and title text color */
+  color: var(--secondary-color); /* menu and title text color */
 }
 
 header nav {
@@ -56,6 +61,7 @@ header nav ul li a {
   min-height: 500px;
   background-size: cover; /* makes the image fit the screen so you can see the whole thing */
   background-position: center;
+  position: relative; /* added for moving label to bottom right*/
 }
 
 .hero-subtitle p {
@@ -65,8 +71,13 @@ header nav ul li a {
   font-size: 20px;
   font-weight: bold;
   border: 5px solid;
-  color: brown;
-  background-color: tan;
+  color: var(--primary-color);
+  background-color: var(--tertiary-color);
+  position: absolute; /* added for moving label to bottom right*/
+  right: 0;  /* added for moving label to bottom right*/
+  bottom: 0;  /* added for moving label to bottom right*/
+  margin-right: 20px; /* moving in label from right edge */
+  margin-bottom: 20px; /* moving in label from bottom edge */
 }
 
 /* end hero section style */
@@ -107,16 +118,17 @@ header nav ul li a {
   justify-content: center;
   align-items: center;
   border: solid;
-  color: white;
+  color: var(--primary-color);
   padding: 1em;
 }
 
 .samples-grid-item a {
-  color: black;
+  color: var(--secondary-color);
   border: 3px solid;
   padding: 10px;
-  background-color: #4169E1;
+  background-color: var(--tertiary-color);
   font-size: 20px;
+  text-decoration: none;
 }
 
 .box1 {
@@ -192,17 +204,17 @@ header nav ul li a {
 
 /* start footer style */
 footer {
-  background: tan;
+  background: var(--tertiary-color);
   width: 100%;
   padding: 20px 35px;
-  color: #4169E1; /* makes text blue */
+  color: var(--secondary-color); /* makes text blue */
   font-size: 35px;
 }
 
 footer a {
   text-align: left; /* puts email address on left */
   text-decoration: none; /* takes away underline from email */
-  color: #4169E1; /* have to declare here because href makes it blue otherwise */
+  color: var(--secondary-color); /* have to declare here because href makes it blue otherwise */
 }
 
 footer p {
@@ -214,12 +226,12 @@ footer p {
 /* The following need to stay at the bottom of the CSS file */
 section {
   padding: 40px;
-  color: #990000;
-  background-color: tan;
+  color: var(--primary-color);
+  background-color: var(--tertiary-color);
 }
 
 section h2 {  /* section titles formatting */
-  color: brown;
+  color: var(--primary-color);
   text-decoration: underline;
   font-style: italic;
  /* padding-top: 90px; /* so that when you go to the heading from menu, you can see the title */
