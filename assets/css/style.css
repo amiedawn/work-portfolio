@@ -236,9 +236,9 @@ section h2 {  /* section titles formatting */
   font-size: 40px;
 }
 
-/* media query for smaller desktop screens and smaller */
+/*media query for smaller desktop screens and smaller */
 @media screen and (max-width: 980px) {
-     header {
+    header {
        padding-bottom: 0;
        justify-content: center;
        position: relative;
@@ -283,23 +283,21 @@ section h2 {  /* section titles formatting */
    }
 }  
 
-/* MEDIA QUERY FOR TABLETS AND SMALLER */
-@media screen and (max-width: 768px) {
-  section {
-      padding: 30px 15px;
-  }
-
-  .about img, .about p {
-    display: block;
-  }
-}
 /* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
-@media screen and (max-width: 575px) {
-  /*section h2 {
-    width: 95%; */
-   .samples-grid-container {
-    flex: 100%;
-    max-width: 100%;
-   }
-  
+ @media screen and (max-width: 575px) {
+ 
+  .samples-grid-container  {
+       flex-direction: column; /* makes the menu stack instead of inline */
+       align-items: center; /* makes the menu stack instead of inline */
+       display: block; /* makes the menu items stacked */
+       text-align: center; /* makes the menu items centered when stacked */
+  }   
+
+  .contact-me {
+       flex-direction: column; /* makes the menu stack instead of inline */
+       align-items: center; /* makes the menu stack instead of inline */
+       display: block; /* makes the menu items stacked */
+       text-align: center; /* makes the menu items centered when stacked */
+  }   
+
 }
