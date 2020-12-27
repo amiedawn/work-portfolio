@@ -108,7 +108,7 @@ header nav ul li a {
   grid-auto-flow: dense; /* puts boxes 2 and 4 in the right places */
   grid-template-areas: "box1-img box1-img box1-img box2-img box3-img"
                         "box1-img box1-img box1-img box4-img box3-img"
-                        "box5-img box5-img box5-img box5-img box6-img";
+                        "box5-img box5-img box5-img box6-img box6-img";
 }
 
 .samples-grid-item {
@@ -132,7 +132,7 @@ header nav ul li a {
 .box1 {
   grid-column: 1 / span 3;
   grid-row: 1 / span 2;
-  background-image: url("../images/jokinator.png");
+  background-image: url("../images/jokinator.png"); 
   width: 100%;
   height: 100%;
   background-size: cover;
@@ -251,7 +251,7 @@ section h2 {  /* section titles formatting */
    }
 
    header nav ul li a {
-       font-size: 15px;
+       font-size: 25px;
        flex-direction: column; /* makes the menu stack instead of inline */
        align-items: center; /* makes the menu stack instead of inline */
        display: block; /* makes the menu items stacked */
@@ -270,6 +270,7 @@ section h2 {  /* section titles formatting */
    .about-info p {
      padding-top: 30px;
      font-size: 20px;
+     width: 100%;
    }   
 
    .section h2 {
@@ -284,7 +285,7 @@ section h2 {  /* section titles formatting */
 }  
 
 /* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
- @media screen and (max-width: 575px) {
+ @media screen and (max-width: 576px) {
  
   .samples-grid-container  {
        flex-direction: column; /* makes the menu stack instead of inline */
@@ -300,4 +301,7 @@ section h2 {  /* section titles formatting */
        text-align: center; /* makes the menu items centered when stacked */
   }   
 
+
+
 }
+
